@@ -1,0 +1,43 @@
+#head{
+    background-color: rgb(177, 122, 95);
+    font-size: medium;
+    padding:30px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;   
+}
+
+.mainbody{
+    
+    display:flex;
+    background-color: salmon;
+
+}
+#dog{
+    
+    height:400px;
+    display: flex;
+
+}
+#toy{
+    
+    height:400px;
+    display: flex;
+
+}
+#cat{
+    
+    height:400px;
+    width:250px;
+    display: flex;
+
+}
+#line{
+    height:50px;
+    font: bold 20px arial;
+    background-color: sandybrown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

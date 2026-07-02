@@ -1,0 +1,31 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#parent{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-row:1fr 1fr ;
+}
+.div1{
+    height:400px;
+    width:400px;
+    background-image: radial-gradient(circle,violet,indigo,blue,green,yellow,orange,red);
+}
+.div2{
+    height:400px;
+    width:400px;
+    background-image: radial-gradient(circle,violet,indigo,blue,green,yellow,orange,red);
+}
+.div3{
+    height:400px;
+    width:400px;
+    background-image: radial-gradient(circle ,violet,indigo,blue,green,yellow,orange,red);
+}
+.div4{
+    height:400px;
+    width:400px;
+    background-image: radial-gradient(circle,violet,indigo,blue,green,yellow,orange,red);
+}

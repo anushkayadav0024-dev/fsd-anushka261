@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Student Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4365cd, #1cc88a);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: 40px auto;
+            background-color:white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        form{
+            background: linear-gradient(to right,rgb(133, 133, 217),rgb(210, 96, 115));
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 15px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4e73df;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #2e59d9;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>College Student Survey Form</h2>
+
+    <form>
+
+        <label>Full Name:</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Age:</label>
+        <input type="number" placeholder="Enter your age" min="16" max="40">
+
+        <label>Department:</label>
+        <select>
+            <option>Select Department</option>
+            <option>Computer Science</option>
+            <option>Mechanical</option>
+            <option>Civil</option>
+            <option>Electrical</option>
+            <option>Commerce</option>
+        </select>
+
+        <label>Year of Study:</label><br>
+        <input type="radio" name="year"> 1st Year
+        <input type="radio" name="year"> 2nd Year
+        <input type="radio" name="year"> 3rd Year
+        <input type="radio" name="year"> 4th Year
+        <br><br>
+
+        <label>Facilities Used:</label><br>
+        <input type="checkbox"> Library<br>
+        <input type="checkbox"> Sports Complex<br>
+        <input type="checkbox"> Hostel<br>
+        <input type="checkbox"> Canteen<br>
+        <input type="checkbox"> Transport<br><br>
+
+        <label>Rate Your Overall Experience:</label>
+        <select>
+            <option>Excellent</option>
+            <option>Good</option>
+            <option>Average</option>
+            <option>Poor</option>
+        </select>
+
+        <label>Suggestions / Feedback:</label>
+        <textarea rows="4" placeholder="Write your feedback here..."></textarea>
+
+        <button type="submit" class="btn">Submit</button>
+
+    </form>
+</div>
+
+</body>
+</html>

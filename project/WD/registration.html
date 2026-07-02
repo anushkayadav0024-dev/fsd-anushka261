@@ -1,0 +1,118 @@
+<!--Anushka Srivastava-->
+<!--2400320100260-->
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>JS Validation1</title> 
+    <style>         .table {             background-color: #f2f2f2;             border-radius: 10px;             padding: 20px;             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4); 
+        } 
+        .link-home {             width: 150px;             height: 30px;             text-align: center;             margin: 40px auto;             background-color: rgb(231, 229, 229);             justify-content: center;             align-items: center;             display: flex;             border-radius: 8px;             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4); 
+        }         .link {             text-decoration: none;             color: black; 
+        } 
+        .link:hover {             color: rgb(4, 163, 174);             text-decoration: underline; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <h1 align="center">Registration form</h1> 
+    <br> 
+    <hr> 
+    <br> 
+    <form onsubmit="return validateForm()"> 
+        <table align="center" border="0" cellpadding="6" cellspacing="0" class="table"> 
+            <tr> 
+                <td>Full name:</td> 
+               <td> 
+                   <input type="text" name="Fullname"> 
+                   <span id="nameError" style="color:red;"></span>                </td> 
+            </tr> 
+            <tr> 
+                <td>Password:</td> 
+                <td> 
+                    <input type="password" name="Password" required> 
+                    <span id="passwordError" style="color:red;"></span> 
+                </td> 
+            </tr> 
+            <tr> 
+                <td>Email:</td> 
+                <td><input type="email" name="Email"></td> 
+            </tr> 
+            <tr> 
+                <td>Phone number:</td> 
+                <td><input type="tel" name="Phonenumber" pattern="[0-
+9]{10}"></td> 
+            </tr> 
+            <tr> 
+                <td>Sex:</td> 
+                <td> 
+                    <input type="radio" name="gender" value="male">Male 
+                    <input type="radio" name="gender" value="Female">Female 
+                    <input type="radio" name="gender" value="Other">Other 
+                </td> 
+            </tr> 
+            <tr> 
+                <td>Date of Birth:</td> 
+                <td> 
+                    <select name="dob_day"> 
+                        <option value="1">1</option> 
+                        <option value="2">2</option> 
+                        <option value="3">3</option> 
+                        <option value="4">4</option> 
+                        <option value="5">5</option> 
+                    </select> 
+                    <select name="dob_month"> 
+                        <option value="January">January</option> 
+                        <option value="February">February</option> 
+                    </select> 
+                    <select name="dob_year"> 
+                        <option value="2003">2003</option> 
+                        <option value="2004">2004</option> 
+                    </select> 
+                </td> 
+            </tr> 
+            <tr> 
+                <td>Languages known:</td> 
+                <td> 
+                    <input type="checkbox" name="language" value="English">English 
+                    <input type="checkbox" name="language" value="Hindi">Hindi 
+                    <input type="checkbox" name="language" value="Other">Tamil 
+                    <input type="checkbox" name="language" value="Other">Telgu 
+                </td> 
+            </tr> 
+            <tr> 
+                <td>Address:</td> 
+                <td><textarea name="address" rows="4" cols="20"></textarea></td> 
+            </tr> 
+            <tr> 
+                <td colspan="2" align="center"> 
+                    <input type="submit" value="Submit"> 
+                    <input type="reset" value="Reset"> 
+                </td> 
+            </tr> 
+        </table> 
+    </form> 
+ 
+    <div class="link-home"><a href="/Experiment-1/index.html" class="link">Back to Home Page</a></div> 
+ 
+    <script>         function validateForm() {             let nameField = document.getElementsByName("Fullname")[0].value.trim();             let passField = document.getElementsByName("Password")[0].value.trim(); 
+             let nameError = document.getElementById("nameError");             let passwordError = document.getElementById("passwordError"); 
+ 
+            const nameRegex = /^[A-Za-z]{6,}$/; 
+ 
+            let isValid = true; 
+ 
+            if (!nameRegex.test(nameField)) {                 nameError.textContent = "Name must contain only alphabets and be at least 6 characters long.";                 isValid = false; 
+            } else {                 nameError.textContent = ""; 
+            } 
+             if (passField.length < 6) {                 passwordError.textContent = "Password must be at least 6 characters long."; 
+                isValid = false; 
+            } else { 
+                passwordError.textContent = ""; 
+            } 
+           return isValid; 
+       } 
+   </script> 
+</body> 
+</html>
